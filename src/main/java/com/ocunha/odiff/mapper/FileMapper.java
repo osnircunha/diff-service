@@ -6,9 +6,9 @@ import com.ocunha.odiff.entities.FileId;
 import com.ocunha.odiff.model.FileType;
 import org.springframework.stereotype.Component;
 
-import java.util.Base64;
-
 /**
+ * <code>{@link FileMapper}</code> used to map data transfer objects to entities.
+ *
  * Created by osnircunha on 25/07/17.
  */
 @Component
