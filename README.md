@@ -15,13 +15,24 @@ git clone https://github.com/osnircunha/diff-service.git
 ```
 
 ### Build
+Unix
 ```$xslt
-gradlew build
+./gradlew build
+```
+Windows
+```$xslt
+gradlew.bat build
 ```
 
 ### Run
+Unix
 ```$xslt
-gradlew bootRun 
+./gradlew bootRun 
+```
+
+Windows
+```$xslt
+gradlew.bat bootRun 
 ```
 
 
