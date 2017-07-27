@@ -4,14 +4,16 @@ Is a powerful tool that provides rest endpoints to submit two Json base64 encode
 
 ## Working from code
 ### Requirements:
-* Lombok: follow the instrucitions bellow to install the plugin on your favorite ide
-  * intellij: https://projectlombok.org/setup/intellij
-  * eclipse: https://projectlombok.org/setup/eclipse
-* Java JDK 1.8
+* Java JDK 1.8 - JAVA_HOME variable is required for gradle wrapper
+* To work with the source code you will need Lombok plugin. You can follow the instructions bellow to install the plugin on your favorite ide
+  * IntelliJ: https://projectlombok.org/setup/intellij
+  * Eclipse: https://projectlombok.org/setup/eclipse
+
 
 ### Get the code
 ```$xslt
 git clone https://github.com/osnircunha/diff-service.git
+cd diff-service
 ```
 
 ### Build
@@ -34,8 +36,6 @@ Windows
 ```$xslt
 gradlew.bat bootRun 
 ```
-
-
 
 ## Usage
 ### Available endpoints:
