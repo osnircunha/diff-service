@@ -12,6 +12,12 @@ pipeline {
           sh "./gradlew clean build"
         }
       }
+        
+      stage('Run Sonar Quality Gate') {
+          steps {
+            sh "./gradlew sonarqube -Dsonar.host.url=http://sonarqube:9000 -Dsonar.projectKey=diff-service -Dsonar.verbose=true"    
+          }
+      }
     /*   
         stage('Project details') {
             withCredentials([usernamePassword(credentialsId: 'jenkins', usernameVariable: 'SONAR_USERNAME', passwordVariable: 'SONAR_PASSWORD')]) {
