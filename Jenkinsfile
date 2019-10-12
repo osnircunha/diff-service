@@ -18,6 +18,12 @@ pipeline {
             sh "./gradlew sonarqube -Dsonar.host.url=http://sonarqube:9000 -Dsonar.projectKey=diff-service -Dsonar.verbose=true"    
           }
       }
+        
+      post { 
+        always { 
+          deleteDir() /* clean up our workspace */
+        }
+      }
     /*   
         stage('Project details') {
             withCredentials([usernamePassword(credentialsId: 'jenkins', usernameVariable: 'SONAR_USERNAME', passwordVariable: 'SONAR_PASSWORD')]) {
