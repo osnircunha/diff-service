@@ -15,7 +15,7 @@ pipeline {
         
       stage('Run Sonar Quality Gate') {
           steps {
-            sh "./gradlew sonarqube -Dsonar.host.url=http://sonarqube:9000 -Dsonar.projectKey=diff-service -Dsonar.verbose=true"    
+            sh "./gradlew sonarqube -Dsonar.host.url=http://localhost:9000 -Dsonar.projectKey=diff-service -Dsonar.verbose=true"    
           }
       }
 
