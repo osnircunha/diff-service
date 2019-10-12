@@ -1,18 +1,17 @@
 pipeline {
-  node {
-      agent any
-      stages {
-        stage('Clone repo') {
-          steps {
-            checkout scm
-          }
+    agent any
+    stages {
+      stage('Clone repo') {
+        steps {
+          checkout scm
         }
+      }
 
-        stage('Build') {
-          steps {
-            sh ".gradlew clean build"
-          }
+      stage('Build') {
+        steps {
+          sh ".gradlew clean build"
         }
+      }
     /*   
         stage('Project details') {
             withCredentials([usernamePassword(credentialsId: 'jenkins', usernameVariable: 'SONAR_USERNAME', passwordVariable: 'SONAR_PASSWORD')]) {
@@ -26,6 +25,5 @@ pipeline {
             }
         }
     */
-    }
   }
 }
